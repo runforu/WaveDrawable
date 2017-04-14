@@ -1,7 +1,5 @@
 package com.open.source;
 
-import com.example.custom.R;
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
@@ -9,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
+
+import com.example.custom.R;
 
 public class MainActivity extends Activity {
 
@@ -23,8 +23,8 @@ public class MainActivity extends Activity {
                 waveDrawable.setInterval(60);
                 waveDrawable.setFastMode(false);
                 SeekBar seekBar = (SeekBar) rootView.findViewById(R.id.seek_bar);
-                waveDrawable.addWave(30, 1, 0x440000ff, 1.8f, ((float) seekBar.getProgress()) / seekBar.getMax(), .5f);
-                waveDrawable.addWave(30, 18, 0x440000ff, 2.4f, ((float) seekBar.getProgress()) / seekBar.getMax(), .7f);
+                waveDrawable.addWave(60, 1, 0x440000ff, 1.8f, ((float) seekBar.getProgress()) / seekBar.getMax(), .8f);
+                waveDrawable.addWave(40, 18, 0x440000ff, 2.4f, ((float) seekBar.getProgress()) / seekBar.getMax(), .9f);
                 rootView.setBackgroundDrawable(waveDrawable);
                 waveDrawable.start();
                 seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
